@@ -13,36 +13,44 @@ var imagesAfrica= document.querySelectorAll(".image_container img");
 var prevsBtn= document.getElementById("prevsBtn")
 var nextBtn= document.getElementById("nextBtn")
 var counter=1;
-var photoWidth=imagesAfrica[counter].clientWidth
-console.log(imagesAfrica.length)
-nextBtn.addEventListener("click",()=>{
-    imageCrousel.style.transition ="transform ease-in-out 0.4s";
-    console.log("counter",counter,imagesAfrica.length)
-    if (counter>=imagesAfrica.length-1){
-        counter=imagesAfrica.length-1;
-    }
-    else{
-
-        counter++;
-    }
+try{
+    var photoWidth=imagesAfrica[counter].clientWidth;
+    nextBtn.addEventListener("click",()=>{
+        imageCrousel.style.transition ="transform ease-in-out 0.4s";
+        console.log("counter",counter,imagesAfrica.length)
+        if (counter>=imagesAfrica.length-1){
+            counter=imagesAfrica.length-1;
+        }
+        else{
     
-    console.log("nextBtn",imageCrousel.clientWidth*counter,"counter", counter)
-    imageCrousel.style.transform="translateX(-"+imageCrousel.clientWidth*counter+"px)";
+            counter++;
+        }
+        
+        imageCrousel.style.transform="translateX(-"+imageCrousel.clientWidth*counter+"px)";
+    
+    })
+    prevsBtn.addEventListener("click",()=>{
+        imageCrousel.style.transition ="transform ease-in-out 0.4s";
+        if (counter<=0){
+            counter=0;
+        }
+        else{
+    
+            counter--;
+        }
+       
+        console.log("prevsBtn",imageCrousel.clientWidth*counter, counter)
+        imageCrousel.style.transform="translateX(-"+imageCrousel.clientWidth*counter+"px)";
+    })
+    
+    
+}
+catch (err)
+{
+    var photoWidth=null
 
-})
-prevsBtn.addEventListener("click",()=>{
-    imageCrousel.style.transition ="transform ease-in-out 0.4s";
-    if (counter<=0){
-        counter=0;
-    }
-    else{
+}
 
-        counter--;
-    }
-   
-    console.log("prevsBtn",imageCrousel.clientWidth*counter, counter)
-    imageCrousel.style.transform="translateX(-"+imageCrousel.clientWidth*counter+"px)";
-})
 
 
 
