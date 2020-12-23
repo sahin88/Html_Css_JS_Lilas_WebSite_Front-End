@@ -34,7 +34,7 @@
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition:background .4s;
+    transition: background .4s;
 }
 .heading_selections a:hover{
     background: #fff;
@@ -83,7 +83,7 @@ body{
     height: 200px;
     width: 80%;
     margin: auto;
-    border:1px solid #ccc
+
 }.images{
     flex-grow: 2;
     object-fit: fill;
@@ -92,6 +92,7 @@ body{
     opacity: 0.4;
     cursor: pointer ;
     margin: auto;
+    padding-right: 2%;
 }
 .active{
     opacity: 1;
@@ -138,7 +139,7 @@ body{
   
 
 .follow_me_icon{
-    color: palegreen;
+    color: seagreen;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -158,7 +159,7 @@ body{
 }
 
 .africa_frame{
-    border:5px solid palegreen;
+    border:5px solid seagreen;
     position: relative;
     width: 100%;
     max-width: 700px;
@@ -307,7 +308,9 @@ body{
     position: relative;
     border: 1px solid #ccc;
     padding: 25px 10px 25px 10px;
+    border: 1px solid seagreen;
     top: 40px;
+    padding-left: 3%;
     flex-direction: column;
     justify-content: space-between;
     background-color: #fff;
@@ -317,7 +320,7 @@ body{
 
 }
 input[type=text], input[type=email], textarea{
-    border: 1px solid #ccc;
+    border: 1px solid seagreen;
     width: 90%;
     padding: 8px;
     border-radius: 2px;
@@ -328,7 +331,7 @@ input[type=text], input[type=email], textarea{
     width: 90%;
     margin-top: 20px;
     padding: 8px;
-    background-color: #047aed;
+    background-color: seagreen;
     color: #fff;
     font-size: 16px;
     font-weight: 900;
@@ -447,8 +450,14 @@ form div label{
     }
     .contact_form_container{
        
-        top: 0px;
+        top: -50px;
         
     
+    }
+    .contact_form_body{
+
+        padding-left: 8%;
+        margin-bottom: 20vh;
+        
     }
   }
