@@ -7,7 +7,42 @@ var selectIcon3= document.getElementById("selectIcon3");
 var images=document.getElementsByClassName("images");
 var queryAll=document.querySelectorAll(".help_photos img")
 var bigOne= document.getElementById("big_one")
-var photo_list=["images/image_1.jpg", "image_2.jpg","image_3.jpg","image_4.jpg","image_5.jpg"]
+
+var imageCrousel= document.querySelector(".image_container");
+var imagesAfrica= document.querySelectorAll(".image_container img");
+var prevsBtn= document.getElementById("prevsBtn")
+var nextBtn= document.getElementById("nextBtn")
+var counter=1;
+var photoWidth=imagesAfrica[counter].clientWidth
+console.log(imagesAfrica.length)
+nextBtn.addEventListener("click",()=>{
+    imageCrousel.style.transition ="transform ease-in-out 0.4s";
+    console.log("counter",counter,imagesAfrica.length)
+    if (counter>=imagesAfrica.length-1){
+        counter=imagesAfrica.length-1;
+    }
+    else{
+
+        counter++;
+    }
+    
+    console.log("nextBtn",imageCrousel.clientWidth*counter,"counter", counter)
+    imageCrousel.style.transform="translateX(-"+imageCrousel.clientWidth*counter+"px)";
+
+})
+prevsBtn.addEventListener("click",()=>{
+    imageCrousel.style.transition ="transform ease-in-out 0.4s";
+    if (counter<=0){
+        counter=0;
+    }
+    else{
+
+        counter--;
+    }
+   
+    console.log("prevsBtn",imageCrousel.clientWidth*counter, counter)
+    imageCrousel.style.transform="translateX(-"+imageCrousel.clientWidth*counter+"px)";
+})
 
 
 
