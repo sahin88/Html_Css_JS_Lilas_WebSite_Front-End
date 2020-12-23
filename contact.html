@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web site</title>
+    <link rel="stylesheet", type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="heading">
+        <div class="heading_logo">
+            <h1 class="h1">Lila`s Web Page</h1>
+        </div>
+        <div class="heading_selections">
+    
+                <a href="index.html">  Home</a>
+                <a href="about.html"> About</a>
+                <a href="contact.html"> Contact</a>
+            </div>
+            <div class="hamburger_menu">
+                <i class="fas fa-bars fa-2x" id="hamburgerButton"></i>
+             
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="slider" id="sliderid">
+
+            <a href="index.html"><i id="selectIcon1" class="fas fa-home fa-2x"></i><div>Home</div></a>
+            <a href="about.html"><i id="selectIcon2" class="far fa-address-card fa-2x"></i><div>About</div></a>
+            <a href="contact.html"><i id="selectIcon3" class="fas fa-envelope-open-text fa-2x"></i><div>Contact</div></a>
+
+    </div>
+    <div class="contact">
+        <div class="contact_form_container">
+            <div class="contact_form_header">
+                <h2> Kontakt Form</h2>
+                <p>Du kanst mir screiben,
+                    i helfe dir gerne!</p>
+
+            </div>
+            <div class="contact_form_body">
+                <form method="POST" action="#">
+                <div>
+                    <label for="name">Name</label>
+                    <br>
+                    <input type="text" required placeholder="Bitte gib dein Name!">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" required placeholder="Bitte gib dein Email!">
+                </div>
+  
+                <div>
+                    <label for="subject">Subject</label>
+                    <br>
+                    <input type="text" required placeholder="Bitte gib dein Subject">
+                </div>
+                <div>
+                    <label for="nessage">Your Message to Lila</label>
+                    <br>
+                    <textarea type="text" >
+                    </textarea>
+                </div>
+                <div>
+                    <button class="contact_submut_btn">Send</button>
+                
+                </div>
+            </form>
+        </div>
+       
+    </div>
+     <script src="style.js"></script>
+</body>
+</html>
